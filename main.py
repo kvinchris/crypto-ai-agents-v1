@@ -7,8 +7,9 @@ import schedule
 import time
 
 load_dotenv()
-
-print("GEMINI:", os.getenv("GEMINI_API_KEY"))
+print("GEMINI:", GEMINI_API_KEY)
+print("BOT:", BOT_TOKEN)
+print("CHAT:", CHAT_ID)
 
 # ===== ENV =====
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -17,6 +18,7 @@ CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 # ===== GEMINI =====
 client = genai.Client(api_key=GEMINI_API_KEY)
+
 
 
 # ===== PRICE DATA =====
