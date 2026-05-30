@@ -8,6 +8,8 @@ import time
 
 load_dotenv()
 
+print("GEMINI:", os.getenv("GEMINI_API_KEY"))
+
 # ===== ENV =====
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
