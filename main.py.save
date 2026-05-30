@@ -1,0 +1,22 @@
+import requests
+import os
+from dotenv import load_dotenv
+from google import genai
+import yfinance as yf
+load_dotenv()
+
+# ===== API KEY =====
+CRYPTO_API = os.getenv("CRYPTOPANIC_API_KEY")
+GEMINI_API = os.getenv("GEMINI_API_KEY")
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+
+# ===== GEMINI SETUP =====
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+
+# ===== AMBIL NEWS =====
+def get_news():
+    tickers = ["BTC-USD", "ETH-USD", "SOL-USD"]
+
+    results = []
+
